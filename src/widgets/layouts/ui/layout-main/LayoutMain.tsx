@@ -16,6 +16,7 @@ const LayoutMain = () => {
     const [modalResumeOpen, setModalResumeOpen] = useState<boolean>(false);
     const [uploadResumeOpen, setUploadResumeOpen] = useState<boolean>(false);
     const [modalVacancyOpen, setModalVacancyOpen] = useState<boolean>(false);
+    const [refreshData, setRefreshData] = useState<boolean>(false);
 
     const { isAuthorized, roleId, name, surname } = useAppSelector(state => state.session);
     const dispatch = useAppDispatch();
@@ -76,11 +77,15 @@ const LayoutMain = () => {
                                 modalResumeOpen={modalResumeOpen}
                                 setModalResumeOpen={setModalResumeOpen}
                                 setUploadResumeOpen={setUploadResumeOpen}
+                                refreshData={refreshData}
+                                setRefreshData={setRefreshData}
                             />
                             <UploadResumeModal
                                 uploadResumeOpen={uploadResumeOpen}
                                 setUploadResumeOpen={setUploadResumeOpen}
                                 setModalResumeOpen={setModalResumeOpen}
+                                refreshData={refreshData}
+                                setRefreshData={setRefreshData}
                             />
                         </>
                     )}
@@ -116,7 +121,7 @@ const LayoutMain = () => {
                     Вакансии
                 </Link>
             </div>
-            <Outlet />
+            <Outlet context={{refreshData, setRefreshData}}/>
         </>
     );
 }

@@ -3,10 +3,16 @@ import { useAppSelector } from "@/shared/model/redux-hooks";
 import { useEffect, useState } from "react";
 import styles from './MyResume.module.scss'
 
-const MyResume = () => {
+interface MyResumeInterface {
+    refreshData: boolean
+}
+
+const MyResume = ({refreshData}: MyResumeInterface) => {
     const { userId, name, surname, patronymic, email, phone } = useAppSelector(state => state.session)
     const [resume, setResume] = useState<Resume>()
     const [pdfFile, setPdfFile] = useState<string>()
+
+    console.log('render')
 
     useEffect(() => {
         const fetchMyResume = async () => {
@@ -37,7 +43,7 @@ const MyResume = () => {
 
         fetchMyResume();
         fetchFileResume();
-    }, [userId]);
+    }, [userId, refreshData]);
 
     return (
         <div className={styles.card}>

@@ -11,11 +11,13 @@ interface UploadResumeModalInterface {
     uploadResumeOpen: boolean;
     setUploadResumeOpen: (status: boolean) => void;
     setModalResumeOpen: (status: boolean) => void;
+    refreshData: boolean
+    setRefreshData: (status: boolean) => void;
 }
 
 const ModalTitle = <h3>Добавление <span className={styles.fill}>резюме</span> для соискателя</h3>
 
-const UploadResumeModal = ({uploadResumeOpen, setUploadResumeOpen, setModalResumeOpen}: UploadResumeModalInterface) => {
+const UploadResumeModal = ({uploadResumeOpen, setUploadResumeOpen, setModalResumeOpen, refreshData, setRefreshData}: UploadResumeModalInterface) => {
     const { control, handleSubmit, formState: { errors }, reset: resetInputs } = useForm();
     const [error, setError] = useState<string>('')
     const {userId} = useAppSelector(state => state.session)
@@ -37,6 +39,8 @@ const UploadResumeModal = ({uploadResumeOpen, setUploadResumeOpen, setModalResum
                 const response = await ResumeService.createFileResume(userId, formattedPdf)
                 console.log('submitted')
                 console.log(response.data)
+
+                setRefreshData(!refreshData)
             } catch (e) {
                 console.log(e)
             }

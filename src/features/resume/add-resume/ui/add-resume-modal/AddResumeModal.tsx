@@ -15,11 +15,13 @@ interface AddResumeModalInterface {
     modalResumeOpen: boolean;
     setModalResumeOpen: (status: boolean) => void;
     setUploadResumeOpen: (status: boolean) => void;
+    refreshData: boolean
+    setRefreshData: (status: boolean) => void;
 }
 
 const ModalTitle = <p className={styles.title}>Создание <span>резюме</span> для соискателя</p>;
 
-const AddResumeModal = ({ modalResumeOpen, setModalResumeOpen, setUploadResumeOpen }: AddResumeModalInterface) => {
+const AddResumeModal = ({ modalResumeOpen, setModalResumeOpen, setUploadResumeOpen, refreshData, setRefreshData }: AddResumeModalInterface) => {
     const [pageNum, setPageNum] = useState<number>(1);
     const [experienceArr, setExperienceArr] = useState<Experience[]>(initialExperienceArr);
     const { control, handleSubmit, formState: { errors }, reset: resetInputs, unregister: unregisterInput} = useForm();
@@ -33,6 +35,7 @@ const AddResumeModal = ({ modalResumeOpen, setModalResumeOpen, setUploadResumeOp
                     const response = await ResumeService.createResume(formattedData)
                     console.log('submitted')
                     console.log(response.data)
+                    setRefreshData(!refreshData)
                 } catch (e) {
                     console.log(e)
                 }

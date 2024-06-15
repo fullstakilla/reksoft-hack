@@ -1,8 +1,11 @@
 import { MyResume } from "@/widgets/my-resume";
+import { useOutletContext } from "react-router-dom";
 
 const MyResumesPage = () => {
+    const {refreshData} = useOutletContext<any>()
+
     return (
-        <MyResume />
+        <MyResume refreshData={refreshData}/>
     )
 }
 
