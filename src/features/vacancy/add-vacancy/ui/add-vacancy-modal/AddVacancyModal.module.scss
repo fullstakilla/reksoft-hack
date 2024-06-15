@@ -1,0 +1,19 @@
+footer {
+    display: flex;
+    justify-content: flex-end;
+
+    .fillAccent {
+        color: var(--accent-color);
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+.title {
+    span {
+        color: var(--accent-color);
+    }
+}

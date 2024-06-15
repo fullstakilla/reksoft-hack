@@ -1,0 +1,29 @@
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 25%;
+
+    .filter {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 18px;
+        justify-content: center;
+        padding: 20px;
+        color: var(--accent-color);
+        height: 50px;
+        border-radius: 15px;
+        cursor: pointer;
+        border: 1px solid var(--accent-color);
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    .picked {
+        background: var(--accent-color);
+        color: white
+    }
+}

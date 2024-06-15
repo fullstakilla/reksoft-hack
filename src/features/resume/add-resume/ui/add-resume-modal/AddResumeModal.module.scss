@@ -1,0 +1,52 @@
+.title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+
+    span {
+        color: var(--accent-color);
+    }
+}
+
+form {
+    .expContent {
+        display: flex;
+        flex-direction: column;
+    
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+        }
+    
+        .expTitle {
+            margin-bottom: 10px;
+            margin-top: 15px;
+        }
+    }
+    
+    .expTitle {
+        margin-bottom: 10px;
+        margin-top: 15px;
+    }
+    
+    .addExpBtn {
+        margin-top: 20px;
+    }
+    
+    footer {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .fillAccent {
+            color: var(--accent-color);
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}

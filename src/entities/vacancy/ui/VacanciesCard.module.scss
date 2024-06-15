@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 10.7px -6px var(--accent-color);
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+
+        h2 {
+            color: var(--accent-color);
+        }
+
+        img {
+            height: 30px;
+        }
+    }
+
+    .fork {
+        font-weight: 500;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .employment {
+        margin-top: 15px;
+        background-color: #FAE3E4;
+        border-radius: 10px;
+        padding: 10px 25px;
+        width: 211px;
+    }
+
+    .description {
+        font-size: 18px;
+        margin-top: 40px;
+    }
+
+    footer {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .replyBtn {
+            height: 40px;
+            width: 190px;
+            font-size: 16px;
+        }
+
+        .starBtn {
+            // border-radius: 50%;
+            height: 40px;
+            background-color: #FAE3E4;
+
+            .star {
+                color: var(--accent-color);
+            }
+        }
+    }
+}

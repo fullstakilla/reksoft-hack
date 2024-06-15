@@ -1,0 +1,14 @@
+form {
+    .fillAccent {
+        color: var(--accent-color);
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+.fill {
+    color: var(--accent-color);
+}

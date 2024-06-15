@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 10.7px -6px var(--accent-color);
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    }
+
+    h2 {
+        margin-top: 45px;
+        margin-bottom: 18px;
+    }
+
+    .desc {
+        margin-bottom: 20px;
+    }
+
+    .imgWrapper {
+        margin: 0 auto;        
+    }
+}

@@ -1,0 +1,49 @@
+.card {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 10.7px -6px var(--accent-color);
+
+    header {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        a {
+            color: var(--accent-color);
+        }
+    }
+
+    .infocards {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 50px;
+        
+        .infocard {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+    }
+
+    .education {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+
+    .experience {
+        display: flex;
+        gap: 20px;
+
+        .exp {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}
