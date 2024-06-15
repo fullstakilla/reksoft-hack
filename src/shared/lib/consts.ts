@@ -14,19 +14,19 @@ export const applicantHomeArr = [
         logo: second,
         title: 'Размещайте резюме',
         description: 'Создайте резюме в приложении или добавьте существующее ',
-        navigationLink: '/'
+        navigationLink: '/vacancies'
     },
     {
         logo: third,
         title: 'Изучайте вакансии',
         description: 'Настройте параметры поиска вакансии и откликайтесь',
-        navigationLink: '/'
+        navigationLink: '/vacancies'
     },
     {
         logo: fourth,
         title: 'Смотрите новости',
         description: 'Лента с актуальными новостями в сфере IT всегда под рукой',
-        navigationLink: '/'
+        navigationLink: '/news'
     },
 ]
 
@@ -41,19 +41,19 @@ export const recruiterHomeArr = [
         logo: second,
         title: 'Размещайте резюме',
         description: 'Создайте резюме в приложении или добавьте существующее ',
-        navigationLink: '/'
+        navigationLink: '/vacancies'
     },
     {
         logo: third,
         title: 'Изучайте отклики',
         description: 'Взаимодействуйте с соискателями и их откликами в приложении',
-        navigationLink: '/'
+        navigationLink: '/vacancies'
     },
     {
         logo: fourth,
         title: 'Смотрите новости',
         description: 'Лента с актуальными новостями в сфере IT всегда под рукой',
-        navigationLink: '/'
+        navigationLink: '/news'
     },
 ]
 
