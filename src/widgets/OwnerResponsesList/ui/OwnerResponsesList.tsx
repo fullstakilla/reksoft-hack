@@ -53,18 +53,24 @@ const OwnerResponsesList = () => {
                             <p><strong>Описание:</strong> {response.vacancy_info.description}</p>
                         </section>
                         <section className={styles.resumeInfo}>
-                            <h3>Резюме соискателя</h3>
-                            <p><strong>Имя:</strong> {response.resume_info.userId}</p>
-                            <p><strong>Специальность:</strong> {response.resume_info.speciality}</p>
-                            <p><strong>Университет:</strong> {response.resume_info.university}</p>
-                            <p><strong>Опыт работы:</strong></p>
-                            <ul>
-                                {response.resume_info.experience.map((exp, index) => (
-                                    <li key={index}>
-                                        <p>{exp.jobPosition} в {exp.company}</p>
-                                    </li>
-                                ))}
-                            </ul>
+                            {response.resume_info.userId !== 0 ?
+                                <>
+                                    <h3>Резюме соискателя</h3>
+                                    <p><strong>Специальность:</strong> {response.resume_info.speciality}</p>
+                                    <p><strong>Университет:</strong> {response.resume_info.university}</p>
+                                    <p><strong>Опыт работы:</strong></p>
+                                    <ul>
+                                        {response.resume_info.experience && response.resume_info.experience.map((exp, index) => (
+                                            <li key={index}>
+                                                <p>{exp.jobPosition} в {exp.company}</p>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </> :
+                                <>
+                                      <h3>У соискателя нет резюме</h3>
+                                </>
+                            }
                         </section>
                     </div>
                 </div>
