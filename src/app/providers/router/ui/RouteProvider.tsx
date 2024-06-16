@@ -10,6 +10,7 @@ import { NewsPage } from "@/pages/news";
 import { VacanciesPage } from "@/pages/vacancies";
 import { MyResumePage } from "@/pages/my-resumes";
 import { MyResponsesPage } from "@/pages/my-responses";
+import { OwnerResponsePage } from "@/pages/owner-response";
 
 type GuardProps = {
     children: ReactElement
@@ -82,6 +83,10 @@ export const setupRouter = () =>
                 {
                     path: "/my-responses",
                     element: <GuestGuard><MyResponsesPage /></GuestGuard>
+                },
+                {
+                    path: "/owner-responses",
+                    element: <GuestGuard><OwnerResponsePage /></GuestGuard>
                 },
             ]
         },

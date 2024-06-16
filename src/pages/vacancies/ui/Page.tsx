@@ -12,9 +12,11 @@ const VacanciesPage = () => {
         const fetchVacancies = async () => {
             try {
                 const response = await VacanciesService.getVacancies()
+                const reversedVacancies = response.data.map((_, idx, arr) => arr[arr.length - 1 - idx]);
 
-                setVacancies(response.data)
-                setFilteredVacancies(response.data);
+                setVacancies(reversedVacancies)
+                setFilteredVacancies(reversedVacancies);
+
             } catch (e) {
                 console.log(e)
             }

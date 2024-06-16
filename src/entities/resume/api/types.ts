@@ -13,6 +13,7 @@ export type Resume = {
         workExperience: string
       }
     ],
+    userId: number
     genderId: number,
     speciality: string,
     university: string,

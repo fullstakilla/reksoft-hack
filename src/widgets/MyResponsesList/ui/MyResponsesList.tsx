@@ -11,7 +11,6 @@ const MyResponsesList = () => {
         const fetchVacancies = async () => {
             try {
                 const response = await VacanciesService.getUserVacancies(userId)
-
                 setVacancies(response.data)
             } catch (e) {
                 console.log(e)
@@ -20,6 +19,10 @@ const MyResponsesList = () => {
 
         fetchVacancies()
     }, [userId])
+
+    if (vacancies === null) {
+        return <span>Пусто</span>
+    }
 
     return (
         <div className={styles.container}>

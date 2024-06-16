@@ -50,6 +50,13 @@ const LayoutMain = () => {
                 key: '3',
             },
         ] : []),
+        ...(roleId === 2 ? [
+            {
+                label: <Link to='/owner-responses'>Мои отклики</Link>,
+                key: '6',
+            },
+
+        ] : []),
         {
             label: <span onClick={handleLogout} style={{ color: 'red' }}>Выйти из аккаунта</span>,
             key: '4',

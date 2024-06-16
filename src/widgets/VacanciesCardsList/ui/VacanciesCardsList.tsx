@@ -26,6 +26,10 @@ const VacanciesCardsList = ({ vacancies }: VacanciesCardsListInterface) => {
         setFilteredVacancies(searchResults);
     };
 
+    if (vacancies === null) {
+        return <span>Пусто.</span>;
+    }
+
     return (
         <div className={styles.container}>
             <header>

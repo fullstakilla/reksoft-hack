@@ -19,4 +19,7 @@ export default class VacanciesService {
     static async getUserVacancies(userId: number | undefined): Promise<AxiosResponse> {
         return $api.get(`/vacancy/responses/user/${userId}`)
     }
+    static async getOwnerVacancies(userId: number | undefined): Promise<AxiosResponse> {
+        return $api.get(`/vacancy/responses/owner/${userId}`)
+    }
 }

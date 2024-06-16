@@ -54,7 +54,8 @@ const MyResume = ({refreshData}: MyResumeInterface) => {
             <div className={styles.infocards}>
                 <div className={styles.infocard}>
                     <span>Пол</span>
-                    <b>{resume?.genderId === 1 ? 'Мужской' : 'Женский'}</b>
+                    <b>{resume?.genderId === 1 && 'Мужской'}</b>
+                    <b>{resume?.genderId === 2 && 'Женский'}</b>
                 </div>
                 <div className={styles.infocard}>
                     <span>Дата рождения</span>
